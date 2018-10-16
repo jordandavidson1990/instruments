@@ -23,11 +23,11 @@ FamilyInfoView.prototype.render = function(family){
   this.container.appendChild(infoParagraph);
 
   const instrumentInclude = document.createElement('h3');
-  instrumentInclude.textContent = 'Instruments Include'
+  instrumentInclude.textContent = 'Instruments Include';
   this.container.appendChild(instrumentInclude);
 
-  const instrumentList = document.createElement('ul');
-  instrumentList.textContent = `${family.instruments} `;
+  const instrumentList = document.createElement('li');
+  instrumentList.textContent = family.instruments;
 
   this.container.appendChild(instrumentList);
   // infoParagraph.textContent =
