@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function(){
   const familyDropdown = new SelectView(selectElement);
   familyDropdown.bindEvents();
 
-  // const infoDiv = document.querySelector('div#family-data')
-  // const familyInfoDisplay = new FamilyInfoView(infoDiv);
-  // familyInfoDisplay.bindEvents();
+  const infoDiv = document.querySelector('div#instrument-data')
+  const familyInfoDisplay = new FamilyInfoView(infoDiv);
+  familyInfoDisplay.bindEvents();
 
   const familyDataSource = new InstrumentFamilies();
   familyDataSource.bindEvents();

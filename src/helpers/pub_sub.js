@@ -3,6 +3,7 @@ const PubSub = {
     const event = new CustomEvent(channel, {
       detail: payload
     });
+    console.log('payload:', payload);
     document.dispatchEvent(event);
   },
 

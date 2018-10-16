@@ -12,10 +12,11 @@ FamilyInfoView.prototype.bindEvents = function(){
 };
 
 FamilyInfoView.prototype.render = function(family){
+  console.log('family:', family);
   const infoParagraph = document.createElement('p');
   infoParagraph.textContent = `The ${family.name}`;
-  this.container.innerHTML = '';
+  // this.container.innerHTML = '';
   this.container.appendChild(infoParagraph);
 };
 
-module.exports = AnimalInfoView;
+module.exports = FamilyInfoView;
