@@ -13,10 +13,24 @@ FamilyInfoView.prototype.bindEvents = function(){
 
 FamilyInfoView.prototype.render = function(family){
   console.log('family:', family);
+  const infoHeading = document.createElement('h2');
+  infoHeading.textContent = family.name;
+  this.container.innerHTML = '';
+  this.container.appendChild(infoHeading);
+
   const infoParagraph = document.createElement('p');
-  infoParagraph.textContent = `The ${family.name}`;
-  // this.container.innerHTML = '';
+  infoParagraph.textContent = family.description;
   this.container.appendChild(infoParagraph);
+
+  const instrumentInclude = document.createElement('h3');
+  instrumentInclude.textContent = 'Instruments Include'
+  this.container.appendChild(instrumentInclude);
+
+  const instrumentList = document.createElement('ul');
+  instrumentList.textContent = `${family.instruments} `;
+
+  this.container.appendChild(instrumentList);
+  // infoParagraph.textContent =
 };
 
 module.exports = FamilyInfoView;
